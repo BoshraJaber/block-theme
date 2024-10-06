@@ -1031,10 +1031,19 @@ $role_object->add_cap('edit_theme_options');
 
 
 
-
-function return_country_name()
+// Create a shortcode to display 'page_title'
+function page_main_heading()
 {
-    return 'Comoros';
+    $page_title = get_field('page_title');
+    if ($page_title) {
+        return '<div class="inner-page-navigation"><h1>' . esc_html($page_title) . '</h1></div>';
+    } elseif (get_the_title()) {
+        return '<div class="inner-page-navigation"><h1>' . get_the_title() . '</h1></div>';
+    } else {
+        // Return nothing if neither 'page_title' nor WordPress title is present
+        return '';
+    }
 }
 
-add_shortcode('country_name', 'return_country_name');
+// Register the shortcode [page_main_heading]
+add_shortcode('page_main_heading', 'page_main_heading');

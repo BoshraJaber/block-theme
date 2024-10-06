@@ -1,12 +1,14 @@
 jQuery(document).ready(function ($) {
     // Your code in here
-    var imgURL = "/wp-content/themes/hello-elementor-child/assets/images/Language.svg";
+    var imgURL = "/arabfund/wp-content/uploads/2024/09/Language.svg";
     var $img = $("<img />");
     $img.attr("src", imgURL);
     $(".lang-item a").prepend($img);
 
     $('.elementor-swiper-button').prepend('<img src="/wp-content/themes/hello-elementor-child/assets/images/more_arrow.svg" alt="arrow">')
 });
+
+
 
 function maxParaHeight() {
     jQuery.fn.extend({
