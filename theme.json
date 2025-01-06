@@ -6,9 +6,24 @@
       "title": "Page"
     },
     {
+      "name": "page-with-pattern",
+      "postTypes": ["page"],
+      "title": "Page with Pattern"
+    },
+    {
       "name": "single-countries",
       "postTypes": ["post"],
       "title": "Countries Details"
+    },
+    {
+      "name": "single-albums",
+      "postTypes": ["post"],
+      "title": "Single Albums"
+    },
+    {
+      "name": "single-conferences_or_event",
+      "postTypes": ["post"],
+      "title": "Single Conferences Events"
     }
   ],
   "patterns": ["three-columns-of-services", "clients-section"],

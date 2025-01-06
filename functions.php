@@ -212,19 +212,43 @@ endif;
 
 add_action('init', 'arab_fund_pattern_categories');
 
-
-
-add_action('after_setup_theme', 'arab_fund_setup');
-
 function arab_fund_setup()
 {
     add_theme_support('wp-block-styles');
-    remove_theme_support('widgets-block-editor');
+    // remove_theme_support('widgets-block-editor');
+
     add_editor_style(array(
         get_stylesheet_uri(),
-        get_parent_theme_file_uri('assets/css/primary.css')
+        get_parent_theme_file_uri('assets/css/primary.css'),
+        get_parent_theme_file_uri('assets/css/select2.min.css'),
+        get_parent_theme_file_uri('assets/css/main.css'),
+        get_parent_theme_file_uri('assets/css/homepagestyle.css'),
+        get_parent_theme_file_uri('assets/css/about.css'),
+        get_parent_theme_file_uri('assets/css/jquery.mCustomScrollbar.min.css'),
+        get_parent_theme_file_uri('assets/css/custom.css'),
+        get_parent_theme_file_uri('assets/css/fancybox.css'),
+        get_parent_theme_file_uri('assets/css/media.css'),
+        get_parent_theme_file_uri('assets/css/aos.css'),
+        get_parent_theme_file_uri('assets/css/jquery-ui.css'),
+        get_parent_theme_file_uri('assets/css/jquery.multiselect.css'),
+        get_parent_theme_file_uri('assets/css/mgpopup.css'),
+        get_parent_theme_file_uri('assets/css/arabfund.css')
     ));
 }
+add_action('after_setup_theme', 'arab_fund_setup');
+
+
+// add_action('after_setup_theme', 'arab_fund_setup');
+
+// function arab_fund_setup()
+// {
+//     add_theme_support('wp-block-styles');
+//     remove_theme_support('widgets-block-editor');
+//     add_editor_style(array(
+//         get_stylesheet_uri(),
+//         get_parent_theme_file_uri('assets/css/primary.css')
+//     ));
+// }
 
 // Importing CSS and JS files
 
@@ -310,26 +334,6 @@ function arab_fund_enqueue_styles()
 }
 
 
-add_action('wp_enqueue_scripts', 'arab_fund_enqueue_scripts');
-
-function arab_fund_enqueue_scripts()
-{
-    wp_enqueue_script(
-        'arab-fund-example',
-        get_parent_theme_file_uri('assets/js/app.js'),
-        array(),
-        wp_get_theme()->get('Version'),
-        true
-    );
-    // Enqueue fancybox.min.js
-    wp_enqueue_script(
-        'arab-fund-fancybox',
-        get_parent_theme_file_uri('shortcode/js/fancybox.min.js'),
-        array('jquery'),
-        wp_get_theme()->get('Version'),
-        true
-    );
-}
 
 // Add Pattern to Dashboard Sidebar
 function add_patterns_to_admin_menu()
@@ -427,30 +431,6 @@ add_shortcode('arabfund_job_shartcode', 'arabfund_job'); /// end simple
 
 function arab_countries_map_data()
 {
-    /*$arab_english_countries = array(
-        '1024' => '219',
-        '1025' => '218',
-        '1026' => '217',
-        '1027' => '216',
-        '1028' => '215',
-        '1030' => '214',
-        '1031' => '213',
-        '1032' => '212',
-        '1033' => '211',
-        '1034' => '210',
-        '1035' => '209',
-        '1036' => '208',
-        '1037' => '207',
-        '1038' => '206',
-        '1039' => '205',
-        '1040' => '204',
-        '1041' => '203',
-        '1042' => '202',
-        '1043' => '201',
-        '1044' => '200',
-        '936' => '937',
-        '938' => '5681',
-    );*/
     $arab_english_countries = array(
         '219' => '1024',
         '218' => '1025',
@@ -1031,19 +1011,215 @@ $role_object->add_cap('edit_theme_options');
 
 
 
-// Create a shortcode to display 'page_title'
-function page_main_heading()
+// // Create a shortcode to display 'page_title'
+// function page_main_heading()
+// {
+//     $page_title = get_field('page_title');
+//     if ($page_title) {
+//         return '<div class=""><h1>' . esc_html($page_title) . '</h1></div>';
+//     } else {
+//         // Return nothing if 'page_title' empty
+//         return '';
+//     }
+// }
+
+// // Register the shortcode [page_main_heading]
+// add_shortcode('page_main_heading', 'page_main_heading');
+
+
+
+
+
+// function my_custom_meta_box()
+// {
+//     add_meta_box(
+//         'my_custom_meta_box_id',           // ID
+//         'Custom Information',              // Title
+//         'my_custom_meta_box_callback',     // Callback function
+//         'page',                            // Post type (can be 'post', 'page', 'your_cpt_slug')
+//         'side',                            // Context (where it shows up: 'side', 'normal', 'advanced')
+//         'high'                             // Priority (high or low)
+//     );
+// }
+// add_action('add_meta_boxes', 'my_custom_meta_box');
+
+// function my_custom_meta_box_callback($post)
+// {
+//     // Add a nonce field for security
+//     wp_nonce_field('my_custom_nonce_action', 'my_custom_nonce');
+
+//     // Retrieve existing value from the database
+//     $value = get_post_meta($post->ID, '_my_custom_meta_key', true);
+
+//     // Display input field
+//     echo '<label for="my_custom_field">Custom Info:</label>';
+//     echo '<input type="text" id="my_custom_field" name="my_custom_field" value="' . esc_attr($value) . '" />';
+// }
+
+// // Save the custom meta box data
+// function my_save_meta_box_data($post_id)
+// {
+//     // Verify the nonce before proceeding
+//     if (!isset($_POST['my_custom_nonce']) || !wp_verify_nonce($_POST['my_custom_nonce'], 'my_custom_nonce_action')) {
+//         return;
+//     }
+
+//     // Save the custom field value
+//     if (isset($_POST['my_custom_field'])) {
+//         update_post_meta($post_id, '_my_custom_meta_key', sanitize_text_field($_POST['my_custom_field']));
+//     }
+// }
+// add_action('save_post', 'my_save_meta_box_data');
+
+// // $custom_info = get_post_meta(get_the_ID(), '_my_custom_meta_key', true);
+// function display_custom_info_shortcode()
+// {
+//     // Get the current post ID
+//     $post_id = get_the_ID();
+
+//     // Retrieve the custom field value using the post ID
+//     $custom_info = get_post_meta($post_id, '_my_custom_meta_key', true);
+
+//     // Return the custom info to be displayed by the shortcode
+//     if (!empty($custom_info)) {
+//         return '<div class="custom-info">' . esc_html($custom_info) . '</div>';
+//     }
+
+//     return ''; // Return nothing if the field is empty
+// }
+// add_shortcode('custom_info', 'display_custom_info_shortcode');
+
+
+function my_main_heading_meta_box()
 {
-    $page_title = get_field('page_title');
-    if ($page_title) {
-        return '<div class="inner-page-navigation"><h1>' . esc_html($page_title) . '</h1></div>';
-    } elseif (get_the_title()) {
-        return '<div class="inner-page-navigation"><h1>' . get_the_title() . '</h1></div>';
+    add_meta_box(
+        'my_main_heading_meta_box_id',     // ID
+        'Main Heading',                    // Title
+        'my_main_heading_meta_box_callback', // Callback function
+        'page',                            // Post type (can be 'post', 'page', 'your_cpt_slug')
+        'side',                            // Context (where it shows up: 'side', 'normal', 'advanced')
+        'high'                             // Priority (high or low)
+    );
+}
+add_action('add_meta_boxes', 'my_main_heading_meta_box');
+
+function my_main_heading_meta_box_callback($post)
+{
+    // Add a nonce field for security
+    wp_nonce_field('my_main_heading_nonce_action', 'my_main_heading_nonce');
+
+    // Retrieve existing value from the database
+    $value = get_post_meta($post->ID, '_my_main_heading_meta_key', true);
+
+    // Display input field
+    echo '<label for="my_main_heading_field"  style="display:block; margin-bottom: 5px;">Main Heading:</label>';
+    echo '<input type="text" id="my_main_heading_field" name="my_main_heading_field" value="' . esc_attr($value) . '" />';
+    echo '<p style="font-size: 12px; color: #666; margin-top: 5px;">Leave empty if none</p>';
+
+}
+
+// Save the main heading meta box data
+function my_save_main_heading_meta_box_data($post_id)
+{
+    // Verify the nonce before proceeding
+    if (!isset($_POST['my_main_heading_nonce']) || !wp_verify_nonce($_POST['my_main_heading_nonce'], 'my_main_heading_nonce_action')) {
+        return;
+    }
+
+    // Save the main heading field value
+    if (isset($_POST['my_main_heading_field'])) {
+        update_post_meta($post_id, '_my_main_heading_meta_key', sanitize_text_field($_POST['my_main_heading_field']));
+    }
+}
+add_action('save_post', 'my_save_main_heading_meta_box_data');
+
+// Create a shortcode to display 'main_heading'
+function page_main_heading_shortcode(){
+    $post_id = get_the_ID();
+    $main_heading = get_post_meta($post_id, '_my_main_heading_meta_key', true);
+
+    // If 'main_heading' is not empty, display it with h1 tag
+    if (!empty($main_heading)) {
+        return '<div class=""><h1>' . esc_html($main_heading) . '</h1></div>';
     } else {
-        // Return nothing if neither 'page_title' nor WordPress title is present
+        // Return nothing if 'main_heading' is empty
         return '';
     }
 }
 
 // Register the shortcode [page_main_heading]
-add_shortcode('page_main_heading', 'page_main_heading');
+add_shortcode('page_main_heading', 'page_main_heading_shortcode');
+
+
+
+function my_mega_menu_meta_box()
+{
+    add_meta_box(
+        'my_mega_menu_meta_box_id',     // ID
+        'Mega Menu',                    // Title
+        'my_mega_menu_meta_box_callback', // Callback function
+        'page',                         // Post type (can be 'post', 'page', 'your_cpt_slug')
+        'side',                         // Context (where it shows up: 'side', 'normal', 'advanced')
+        'high'                          // Priority (high or low)
+    );
+}
+add_action('add_meta_boxes', 'my_mega_menu_meta_box');
+
+function my_mega_menu_meta_box_callback($post)
+{
+    // Add a nonce field for security
+    wp_nonce_field('my_mega_menu_nonce_action', 'my_mega_menu_nonce');
+
+    // Retrieve the existing Mega Menu value
+    $mega_menu_value = get_post_meta($post->ID, '_my_mega_menu_meta_key', true);
+
+    // Get all registered menus (including Mega Menu menus)
+    $menus = get_terms('nav_menu', array('hide_empty' => false));
+
+    // Display dropdown for Mega Menu selection
+    echo '<label for="my_mega_menu_field">Select Mega Menu:</label>';
+    echo '<select id="my_mega_menu_field" name="my_mega_menu_field">';
+    echo '<option value="">Select a Mega Menu</option>'; // Default option
+
+    // Loop through the menus and populate the dropdown options
+    if (!empty($menus)) {
+        foreach ($menus as $menu) {
+            $selected = ($mega_menu_value == $menu->term_id) ? 'selected="selected"' : '';
+            echo '<option value="' . esc_attr($menu->term_id) . '" ' . $selected . '>' . esc_html($menu->name) . '</option>';
+        }
+    }
+    echo '</select>';
+}
+
+// Save the Mega Menu meta box data
+function my_save_mega_menu_meta_box_data($post_id)
+{
+    // Verify the nonce before proceeding
+    if (!isset($_POST['my_mega_menu_nonce']) || !wp_verify_nonce($_POST['my_mega_menu_nonce'], 'my_mega_menu_nonce_action')) {
+        return;
+    }
+
+    // Save the selected Mega Menu value
+    if (isset($_POST['my_mega_menu_field'])) {
+        update_post_meta($post_id, '_my_mega_menu_meta_key', sanitize_text_field($_POST['my_mega_menu_field']));
+    }
+}
+add_action('save_post', 'my_save_mega_menu_meta_box_data');
+// Create a shortcode to display the selected Mega Menu
+function display_mega_menu_shortcode()
+{
+    $post_id = get_the_ID();
+    $mega_menu_id = get_post_meta($post_id, '_my_mega_menu_meta_key', true);
+
+    if (!empty($mega_menu_id)) {
+        return wp_nav_menu(array(
+            'menu' => $mega_menu_id,
+            'echo' => false, // Return the menu instead of echoing
+        ));
+    }
+    return ''; // Return nothing if no Mega Menu is selected
+}
+add_shortcode('mega_menu', 'display_mega_menu_shortcode');
+
+
+

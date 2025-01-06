@@ -230,7 +230,7 @@ function arabfund_search()
                 });
             });   
         </script>
-    <?php
+        <?php
     }
 }
 
@@ -339,7 +339,7 @@ function albums_arabfund()
             $query->the_post();
             $mediaimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
             if ($mediaimg == "") {
-                $mediaimg = "/wp-content/themes/arab-fund/assets/images/no_img_gallery.jpg";
+                $mediaimg = "/arabfund/wp-content/themes/arab-fund/assets/images/no_img_gallery.jpg";
             }
             $album_images = get_field('album_images', get_the_ID());
             //$imgcount = count($album_images);
@@ -458,7 +458,7 @@ function arabfund_get_albums()
                 $query->the_post();
                 $mediaimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 if ($mediaimg == "") {
-                    $mediaimg = "/wp-content/themes/arab-fund/assets/images/no_img_gallery.jpg";
+                    $mediaimg = "/arabfund/wp-content/themes/arab-fund/assets/images/no_img_gallery.jpg";
                 }
                 $imgcount = count(get_field('album_images'));
 
@@ -466,7 +466,7 @@ function arabfund_get_albums()
                                   <div class="photo-box">
                                     <img class="gallery_img" src="' . $mediaimg . '" alt="' . get_field('album_name') . '">
                                       <div class="photo-info">
-                                        <h6><img src="/wp-content/uploads/2022/04/Icon-photo.svg">' . $imgcount . ' <span class="en_view">Photos</span><span class="ar_view">الصور</span></h6>
+                                        <h6><img src="/arabfund/wp-content/uploads/2022/04/Icon-photo.svg">' . $imgcount . ' <span class="en_view">Photos</span><span class="ar_view">الصور</span></h6>
                                         <p>' . get_the_title() . '</p>
                                       </div>
                                     </div>
@@ -716,7 +716,7 @@ function video_arabfund()
             $query->the_post();
             $videoimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
             if ($videoimg == "") {
-                $videoimg = "/wp-content/uploads/2022/04/no_video.png";
+                $videoimg = "/arabfund/wp-content/uploads/2022/04/no_video.png";
             }
             $video_publish_date = get_field('video_publish_date');
             $pub_date = '';
@@ -821,7 +821,7 @@ function arab_get_video()
                 $query->the_post();
                 $videoimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 if ($videoimg == "") {
-                    $videoimg = "/wp-content/uploads/2022/04/no_video.png";
+                    $videoimg = "/arabfund/wp-content/uploads/2022/04/no_video.png";
                 }
                 $html .= '<div class="video-block">
                             <div class="video-box">
@@ -934,7 +934,7 @@ function arabfund_meeting()
         $query->the_post();
         $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberImg == "") {
-            $memberImg = "/wp-content/uploads/2022/04/img.png";
+            $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
         }
         $post_id = get_the_ID();
 
@@ -980,7 +980,7 @@ function arabfund_newsevent_home()
         $query->the_post();
         $eventnewsimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($eventnewsimg == "") {
-            $eventnewsimg = "/wp-content/themes/arab-fund/assets/images/noimg_logo.jpg";
+            $eventnewsimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_logo.jpg";
         }
         $post_id = get_the_ID();
         $categories = get_the_terms($post_id, 'news_or_activity_type');
@@ -1014,9 +1014,9 @@ function arabfund_newsevent_home()
         }
         $data .= ' 
 						  </div>
-                          <p class="event_date"><img src="/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . $event_news_date . '</span> </p>
+                          <p class="event_date"><img src="/arabfund/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . $event_news_date . '</span> </p>
                           <p class="event_description">' . get_field("short_description") . '</p>
-                          <a href="' . get_permalink() . '" target="_self"> <span class="ar_view">اقرأ أكثر </span><span class="en_view">Read More</span>  <img src="/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon" class="green_arrow"></a>
+                          <a href="' . get_permalink() . '" target="_self"> <span class="ar_view">اقرأ أكثر </span><span class="en_view">Read More</span>  <img src="/arabfund/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon" class="green_arrow"></a>
                       </div>
                   </div>';
 
@@ -1043,7 +1043,7 @@ function coutry_listview()
         $query->the_post();
         $countryImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($countryImg == "") {
-            $countryImg = "/wp-content/uploads/2023/09/no_img.svg";
+            $countryImg = "/arabfund/wp-content/uploads/2023/09/no_img.svg";
         }
         $post_id = get_the_ID();
 
@@ -1213,7 +1213,7 @@ function annual_report_list()
             $query->the_post();
             $annualreportsImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
             if ($annualreportsImg == "") {
-                $annualreportsImg = "/wp-content/themes/arab-fund/assets/images/pdficon.jpg";
+                $annualreportsImg = "/arabfund/wp-content/themes/arab-fund/assets/images/pdficon.jpg";
             }
             $post_id = get_the_ID();
 
@@ -1392,7 +1392,7 @@ function jae_annual_report_list()
 
             $report_eng_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
             if ($report_eng_img == "") {
-                $report_eng_img = "/wp-content/themes/arab-fund/assets/images/pdficon.jpg";
+                $report_eng_img = "/arabfund/wp-content/themes/arab-fund/assets/images/pdficon.jpg";
             }
             $post_id = get_the_ID();
             $report_attachment = get_field("jae_annual_report_attachment");
@@ -1434,7 +1434,7 @@ function board_members_list()
         $query->the_post();
         $memberimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberimg == "") {
-            $memberimg = "/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
+            $memberimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
         }
         $post_id = get_the_ID();
 
@@ -1466,7 +1466,7 @@ function board_members_list()
         $query->the_post();
         $governorimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($governorimg == "") {
-            $governorimg = "/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
+            $governorimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
         }
         $post_id = get_the_ID();
 
@@ -1512,7 +1512,7 @@ function manager_directors_of_board_list()
         $query->the_post();
         $memberimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberimg == "") {
-            $memberimg = "/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
+            $memberimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
         }
         $post_id = get_the_ID();
 
@@ -1550,7 +1550,7 @@ function manager_directors_of_board_list()
         $query->the_post();
         $governorimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($governorimg == "") {
-            $governorimg = "/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
+            $governorimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
         }
         $post_id = get_the_ID();
 
@@ -1599,7 +1599,7 @@ function links_list()
         $query->the_post();
         $links_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($links_img == "") {
-            $links_img = "/wp-content/themes/arab-fund/assets/images/no_logo.png";
+            $links_img = "/arabfund/wp-content/themes/arab-fund/assets/images/no_logo.png";
         }
         $post_id = get_the_ID();
         $websitelink = get_field("organization_link");
@@ -1618,7 +1618,7 @@ function links_list()
         $query->the_post();
         $links_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($links_img == "") {
-            $links_img = "/wp-content/themes/arab-fund/assets/images/no_logo.png";
+            $links_img = "/arabfund/wp-content/themes/arab-fund/assets/images/no_logo.png";
         }
         $post_id = get_the_ID();
         $websitelink = get_field("organization_link");
@@ -1650,7 +1650,7 @@ function institutions_list()
         $query->the_post();
         $institutions_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($institutions_img == "") {
-            $institutions_img = "/wp-content/themes/arab-fund/assets/images/pdf.svg";
+            $institutions_img = "/arabfund/wp-content/themes/arab-fund/assets/images/pdf.svg";
         }
         $post_id = get_the_ID();
         $websitelink = get_field("institution_link");
@@ -1683,7 +1683,7 @@ function newsact_arabfund()
 
     $eventnewsimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
     if ($eventnewsimg == "") {
-        $eventnewsimg = "/wp-content/themes/arab-fund/assets/images/noimg.png";
+        $eventnewsimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg.png";
     }
     $post_id = get_the_ID();
     $categories = get_the_terms($post_id, 'news_or_activity_type');
@@ -1710,7 +1710,7 @@ function newsact_arabfund()
         $data .= '</ul>';
     }
     $data .= '</div>
-                                  <div class="news_date"><img src="/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . $event_news_date . '</span></div>
+                                  <div class="news_date"><img src="/arabfund/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . $event_news_date . '</span></div>
                               </div>
                                 <p>' . get_field("news_event_description") . '</p>';
 
@@ -1846,7 +1846,7 @@ function meetingsingle_arabfund()
 
     $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
     if ($memberImg == "") {
-        $memberImg = "/wp-content/uploads/2022/04/img.png";
+        $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
     }
     $post_id = get_the_ID();
 
@@ -1937,7 +1937,7 @@ function arabfund_newsevent_list()
         $query->the_post();
         $eventnewsimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($eventnewsimg == "") {
-            $eventnewsimg = "/wp-content/themes/arab-fund/assets/images/noimg_logo.jpg";
+            $eventnewsimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_logo.jpg";
         }
         $post_id = get_the_ID();
         $categories = get_the_terms($post_id, 'news_or_activity_type');
@@ -1971,9 +1971,9 @@ function arabfund_newsevent_list()
         }
         $data .= ' 
 						  </div>
-                          <p class="event_date"><img src="/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . $event_news_date . '</span> </p>
+                          <p class="event_date"><img src="/arabfund/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . $event_news_date . '</span> </p>
                           <p class="event_description">' . get_field("short_description") . '</p>
-                          <a href="' . get_permalink() . '" target="_self"> <span class="ar_view">اقرأ أكثر </span><span class="en_view">Read More</span>  <img src="/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon" class="green_arrow"></a>
+                          <a href="' . get_permalink() . '" target="_self"> <span class="ar_view">اقرأ أكثر </span><span class="en_view">Read More</span>  <img src="/arabfund/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon" class="green_arrow"></a>
                       </div>
                   </div>';
 
@@ -2006,7 +2006,7 @@ function arabfund_meeting_list()
         $query->the_post();
         $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberImg == "") {
-            $memberImg = "/wp-content/uploads/2022/04/img.png";
+            $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
         }
         $post_id = get_the_ID();
 
@@ -2114,7 +2114,7 @@ function conferences_or_event_list()
             $query->the_post();
             $jae_annualreportsImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
             if ($jae_annualreportsImg == "") {
-                $jae_annualreportsImg = "/wp-content/themes/arab-fund/assets/images/pdf.svg";
+                $jae_annualreportsImg = "/arabfund/wp-content/themes/arab-fund/assets/images/pdf.svg";
             }
             $post_id = get_the_ID();
             $categories = get_the_terms($post_id, 'conferences_events_type');
@@ -2202,17 +2202,17 @@ function conferences_or_event_list()
         <div class="conference_event_details">
             <div class="event_date_from event_dates">
                   <p>' . arabfund_str_display('From Date') . '</p> 
-                <span><img src="/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_start_date . '</span>
+                <span><img src="/arabfund/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_start_date . '</span>
             </div>
             <div class="event_date_to event_dates">
             <p>' . arabfund_str_display('To Date') . '</p>
-            <span><img src="/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_end_date . '</span></div>
+            <span><img src="/arabfund/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_end_date . '</span></div>
             <div class="event_location event_dates">
             <p class="m-none">&nbsp;</p>
-            <span><img src="/wp-content/uploads/2024/01/location_icon.svg" ></span> ' . get_field("event_location") . '</div>
+            <span><img src="/arabfund/wp-content/uploads/2024/01/location_icon.svg" ></span> ' . get_field("event_location") . '</div>
         </div>
         <hr>
-        <a href="' . get_permalink($post_id) . '" target="_self"> <span class="ar_view">اقرأ أكثر </span><span class="en_view">Read More</span>  <img src="/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon"></a>
+        <a href="' . get_permalink($post_id) . '" target="_self"> <span class="ar_view">اقرأ أكثر </span><span class="en_view">Read More</span>  <img src="/arabfund/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon"></a>
       </div>';
 
         endwhile;
@@ -2484,7 +2484,7 @@ function conference_events_filters()
             $query->the_post();
             $jae_annualreportsImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
             if ($jae_annualreportsImg == "") {
-                $jae_annualreportsImg = "/wp-content/themes/arab-fund/assets/images/pdf.svg";
+                $jae_annualreportsImg = "/arabfund/wp-content/themes/arab-fund/assets/images/pdf.svg";
             }
             $post_id = get_the_ID();
             $categories = get_the_terms($post_id, 'conferences_events_type');
@@ -2562,13 +2562,13 @@ function conference_events_filters()
                     <div class="event_published_date"><?php echo $event_date; ?></div>
                     <div class="event_type_name	">
                         <?php /*if ( is_array( $categories ) ) { ?> 
-                               <ul class="event_type_list">
-                                   <?php foreach ($categories as $key => $cat) { 
-                                     $categoryname = $cat->name;?>
-                                      <li id="<?php echo str_replace(' ', '', $cat->name )?>"><?php  echo $categoryname; ?></li>
-                                   <?php } ?>  
-                               </ul>
-                            <?php }*/ ?>
+                                                                                                     <ul class="event_type_list">
+                                                                                                         <?php foreach ($categories as $key => $cat) { 
+                                                                                                           $categoryname = $cat->name;?>
+                                                                                                            <li id="<?php echo str_replace(' ', '', $cat->name )?>"><?php  echo $categoryname; ?></li>
+                                                                                                         <?php } ?>  
+                                                                                                     </ul>
+                                                                                                  <?php }*/ ?>
                         <ul class="event_type_list">
                             <li id=<?php echo $event_status_class; ?>><?php echo $event_status_label; ?></li>
                         </ul>
@@ -2582,23 +2582,23 @@ function conference_events_filters()
                     <div class="event_date_from event_dates">
                         <p><?php echo arabfund_str_display('From Date'); ?></p>
                         <span><img decoding="async"
-                                src="/wp-content/uploads/2024/01/calendar_icon.svg"><?php echo $event_start_date; ?></span>
+                                src="/arabfund/wp-content/uploads/2024/01/calendar_icon.svg"><?php echo $event_start_date; ?></span>
                     </div>
                     <div class="event_date_to event_dates">
                         <p><?php echo arabfund_str_display('To Date'); ?></p>
                         <span><img decoding="async"
-                                src="/wp-content/uploads/2024/01/calendar_icon.svg"><?php echo $event_end_date; ?></span>
+                                src="/arabfund/wp-content/uploads/2024/01/calendar_icon.svg"><?php echo $event_end_date; ?></span>
                     </div>
                     <div class="event_location event_dates">
                         <p class="m-none">&nbsp;</p>
-                        <span><img decoding="async" src="/wp-content/uploads/2024/01/location_icon.svg"></span>
+                        <span><img decoding="async" src="/arabfund/wp-content/uploads/2024/01/location_icon.svg"></span>
                         <?php echo get_field("event_location"); ?>
                     </div>
                 </div>
                 <hr>
                 <a href="<?php echo get_permalink(); ?>" target="_self"> <span class="ar_view">اقرأ أكثر </span><span
                         class="en_view">Read More</span> <img decoding="async"
-                        src="/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon"></a>
+                        src="/arabfund/wp-content/uploads/2024/01/green_arrow_event.svg" alt="readmore-icon"></a>
             </div>
         <?php endwhile; else: ?>
         <div class="not-found">
@@ -2624,7 +2624,7 @@ function conferences_or_event_detail()
     //while( $query->have_posts() ):$query->the_post();           
     $detailcoverImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
     if ($detailcoverImg == "") {
-        $detailcoverImg = "/wp-content/themes/arab-fund/assets/images/cover.jpg";
+        $detailcoverImg = "/arabfund/wp-content/themes/arab-fund/assets/images/cover.jpg";
     }
     $post_id = get_the_ID();
     $categories = get_the_terms($post_id, 'conferences_events_type');
@@ -2701,14 +2701,14 @@ function conferences_or_event_detail()
                 <div class="conference_event_details">
                     <div class="event_date_from event_dates">
                           <p>' . arabfund_str_display('From Date') . '</p> 
-                        <span><img src="/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_start_date . '</span>
+                        <span><img src="/arabfund/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_start_date . '</span>
                     </div>
                     <div class="event_date_to event_dates">
                     <p>' . arabfund_str_display('To Date') . '</p>
-                    <span><img src="/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_end_date . '</span></div>
+                    <span><img src="/arabfund/wp-content/uploads/2024/01/calendar_icon.svg" >' . $event_end_date . '</span></div>
                     <div class="event_location event_dates">
                     <p class="m-none">&nbsp;</p>
-                    <span><img src="/wp-content/uploads/2024/01/location_icon.svg" ></span> ' . get_field("event_location") . '</div>
+                    <span><img src="/arabfund/wp-content/uploads/2024/01/location_icon.svg" ></span> ' . get_field("event_location") . '</div>
 
                     <div class="detail_category">';
 
@@ -2731,9 +2731,9 @@ function conferences_or_event_detail()
                   </div>
                   <div class="event_tabs">
                       <ul class="tabs event_list">
-                        <li class="tab-link current" data-tab="tab-1"><img src="/wp-content/uploads/2024/01/schedule.svg" alt="icon"> <span class="en_view">Conference Agenda</span><span class="ar_view">أجندة المؤتمر</span></li>
-                        <li class="tab-link" data-tab="tab-2"><img src="/wp-content/uploads/2024/01/gallery.svg" alt="icon"><span class="en_view">Part of the Conference in Pictures</span><span class="ar_view">جانب من المؤتمر فى صور</span></li>
-                        <li class="tab-link" data-tab="tab-3"><img src="/wp-content/uploads/2024/01/contract.svg" alt="icon"><span class="en_view">Register your interest here</span><span class="ar_view">سجل اهتمامك هنا</span></li>                    
+                        <li class="tab-link current" data-tab="tab-1"><img src="/arabfund/wp-content/uploads/2024/01/schedule.svg" alt="icon"> <span class="en_view">Conference Agenda</span><span class="ar_view">أجندة المؤتمر</span></li>
+                        <li class="tab-link" data-tab="tab-2"><img src="/arabfund/wp-content/uploads/2024/01/gallery.svg" alt="icon"><span class="en_view">Part of the Conference in Pictures</span><span class="ar_view">جانب من المؤتمر فى صور</span></li>
+                        <li class="tab-link" data-tab="tab-3"><img src="/arabfund/wp-content/uploads/2024/01/contract.svg" alt="icon"><span class="en_view">Register your interest here</span><span class="ar_view">سجل اهتمامك هنا</span></li>                    
                       </ul>
                   </div>
                   <div class="conference_container">
@@ -2796,7 +2796,7 @@ function conferences_or_event_detail()
 
                     }
                     //$data .='<p>'.$replace.'</p>';
-                    $data .= '<p><img src="/wp-content/uploads/2024/01/clock_icon.svg" alt="clock-icon"> <span>' . $converted_start_time . '</span> - <span>' . $converted_end_time . '</span> </p>
+                    $data .= '<p><img src="/arabfund/wp-content/uploads/2024/01/clock_icon.svg" alt="clock-icon"> <span>' . $converted_start_time . '</span> - <span>' . $converted_end_time . '</span> </p>
                                </div>';
                     if (have_rows('session_schedules', $post_id)):
                         $data .= ' <div class="timings_session">';
@@ -2834,11 +2834,11 @@ function conferences_or_event_detail()
                                 $day_sessionEndTime_display = $time;
                                 $converted_end_time = convertTimeToArabic($day_sessionEndTime_display);
                             }
-                            $data .= ' <p><img src="/wp-content/uploads/2024/01/clock_icon.svg" alt="clock-icon"><span>' . $converted_start_time . ' </span> - <span>' . $converted_end_time . '</span></p>';
+                            $data .= ' <p><img src="/arabfund/wp-content/uploads/2024/01/clock_icon.svg" alt="clock-icon"><span>' . $converted_start_time . ' </span> - <span>' . $converted_end_time . '</span></p>';
 
                             $materialurl = get_sub_field("material", $post_id);
                             if ($materialurl != "" && $materialurl != "-") {
-                                $data .= '<a href="' . $materialurl . '" target="_blank"><img src="/wp-content/uploads/2024/01/download_icon.svg" alt="clock-icon" > <span class="en_view">Material Download</span><span class="ar_view">تحميل المواد</span></a>';
+                                $data .= '<a href="' . $materialurl . '" target="_blank"><img src="/arabfund/wp-content/uploads/2024/01/download_icon.svg" alt="clock-icon" > <span class="en_view">Material Download</span><span class="ar_view">تحميل المواد</span></a>';
                             }
                             $data .= ' 
                                                         </div>
@@ -2846,7 +2846,7 @@ function conferences_or_event_detail()
                                                         <h5>' . get_sub_field("speech_title", $post_id) . '</h5>';
                             $speakerImg = get_sub_field("speaker_photo", $post_id);
                             if ($speakerImg == "") {
-                                $speakerImg = "/wp-content/themes/arab-fund/assets/images/user.png";
+                                $speakerImg = "/arabfund/wp-content/themes/arab-fund/assets/images/user.png";
                             }
                             $data .= ' <p><img src=" ' . $speakerImg . '" alt="speakar-name">' . get_sub_field("speaker_name", $post_id) . '</p>
                                                         </div>
@@ -2988,7 +2988,7 @@ function arabfund_signed_loans()
         $query->the_post();
         $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberImg == "") {
-            $memberImg = "/wp-content/uploads/2022/04/img.png";
+            $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
         }
         $post_id = get_the_ID();
         $arabdate = get_field('meeting_date');
@@ -3041,7 +3041,7 @@ function arabfund_approved_loans()
         $query->the_post();
         $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberImg == "") {
-            $memberImg = "/wp-content/uploads/2022/04/img.png";
+            $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
         }
         $post_id = get_the_ID();
         $arabdate = get_field('meeting_date');
@@ -3099,7 +3099,7 @@ function arabfund_approved_grants()
         $query->the_post();
         $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberImg == "") {
-            $memberImg = "/wp-content/uploads/2022/04/img.png";
+            $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
         }
         $post_id = get_the_ID();
         $arabdate = get_field('meeting_date');
@@ -3172,7 +3172,7 @@ function arabfund_meeting_special_account()
         $query->the_post();
         $memberImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($memberImg == "") {
-            $memberImg = "/wp-content/uploads/2022/04/img.png";
+            $memberImg = "/arabfund/wp-content/uploads/2022/04/img.png";
         }
         $post_id = get_the_ID();
 
@@ -3210,7 +3210,7 @@ function committee_members_list()
         $query->the_post();
         $governorimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($governorimg == "") {
-            $governorimg = "/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
+            $governorimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
         }
         $post_id = get_the_ID();
 
@@ -3250,7 +3250,7 @@ function supervisory_members_list()
         $query->the_post();
         $governorimg = get_the_post_thumbnail_url(get_the_ID(), 'full');
         if ($governorimg == "") {
-            $governorimg = "/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
+            $governorimg = "/arabfund/wp-content/themes/arab-fund/assets/images/noimg_team_logo.png";
         }
         $post_id = get_the_ID();
 
@@ -3299,7 +3299,7 @@ function HamadWinners()
             $data .= '
   	<div class="newstype_date">
   		<div class="news_date">
-        	<img src="/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . get_the_title() . '</span>
+        	<img src="/arabfund/wp-content/uploads/2023/11/calendar_icon.svg" alt="date-icon"><span>' . get_the_title() . '</span>
         </div>
     </div>
     <p>' . get_field("description") . '</p>';
@@ -3451,7 +3451,7 @@ function HamadNews()
     if ($query->have_posts()) {
         $data .= '
       <div id="openHamadNews" class="icon-bar">
-          <a href="#"><img width="50px" src="/wp-content/uploads/2024/06/Hamad-Logo.svg" alt="Al-Hamad Award"></a>
+          <a href="#"><img width="50px" src="/arabfund/wp-content/uploads/2024/06/Hamad-Logo.svg" alt="Al-Hamad Award"></a>
       </div>
     ';
     }

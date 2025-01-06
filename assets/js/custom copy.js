@@ -40,7 +40,7 @@ function get_album_data(publish_date, page) {
             publish_date: publish_date,
         },
         success: function (response) {
-            // console.log(response);
+            console.log(response);
             jQuery('.album_section').html(response.content);
             jQuery('.site-loader').hide();
         }
@@ -58,25 +58,22 @@ function get_video_data(publish_date, page) {
             publish_date: publish_date,
         },
         success: function (response) {
-            // console.log(response);
+            console.log(response);
             jQuery('.video-section').html(response.content);
             jQuery('.site-loader').hide();
         }
     });
 }
+
 function reloadpage() {
     window.location.href = window.location.href;
 }
 function innerpageNavResponsive() {
     if (jQuery('.inner-page-navigation').length) {
         jQuery('.inner-page-navigation').each(function () {
-            if (document.querySelectorAll('.inner-navigation-title')[0]) {
-                var wrapperWidth = document.querySelectorAll('.inner-navigation-title')[0].offsetWidth;
-
-            }
-            var tabLinkWidth = 0;
-            jQuery(this).find('ul.menu>li').each(function () {
-
+            var wrapperWidth = jQuery(".inner-page-navigation .elementor-widget-heading").width();
+            var tabLinkWidth = 30;
+            jQuery(this).find('.elementor-nav-menu>li').each(function () {
                 tabLinkWidth += jQuery(this).outerWidth(true);
             });
             if (wrapperWidth < tabLinkWidth) {
@@ -87,7 +84,6 @@ function innerpageNavResponsive() {
         });
     }
 }
-
 function equalHeight() {
     jQuery.fn.extend({
         equalHeight: function () {
@@ -279,12 +275,12 @@ jQuery(document).ready(function () {
     ///////////////////////////////////////////////
     ///////////////////////////////////////////////////////
     if (jQuery('.inner-page-navigation').length) {
-        // jQuery('.inner-page-navigation .elementor-widget-heading .elementor-widget-container').append('<div class="three-dot-menu-link"></div>');
+        jQuery('.inner-page-navigation .elementor-widget-heading .elementor-widget-container').append('<div class="three-dot-menu-link"></div>');
         if (jQuery('.inner-page-navigation ul li.menu-item-has-children').length) {
             jQuery('.inner-page-navigation ul li.menu-item-has-children').append('<div class="three-dot-sub-menu-link"></div>')
         }
     }
-    jQuery("body").delegate(".inner-page-navigation  .three-dot-menu-link", "click", function (e) {
+    jQuery("body").delegate(".inner-page-navigation .elementor-widget-heading .three-dot-menu-link", "click", function (e) {
         jQuery(this).closest('.inner-page-navigation').toggleClass('nav-open');
     });
     jQuery("body").delegate(".inner-page-navigation ul li.menu-item-has-children .three-dot-sub-menu-link", "click", function (e) {
@@ -335,7 +331,10 @@ jQuery(document).ready(function () {
 
             },
             success: function (response) {
+                console.log(response)
                 if (response.html != "") {
+                    console.log("in if")
+
                     jQuery(".conferences_container").html(response.html);
                 }
             }
@@ -355,6 +354,7 @@ jQuery(document).ready(function () {
                 taxonomy_id: '',
             },
             success: function (response) {
+                console.log(response)
                 if (response.html != "") {
                     jQuery(".conferences_container").html(response.html);
                 }
@@ -459,6 +459,8 @@ jQuery(document).ready(function () {
             var showFrom = perPage * (pageNumber - 1);
             var showTo = showFrom + perPage;
             items.hide().slice(showFrom, showTo).show();
+            console.log(showFrom);
+            console.log(showTo);
             var reportsWrapElement = document.querySelector('.reports-wrap');
             if (reportsWrapElement) {
                 reportsWrapElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -631,119 +633,3 @@ jQuery(document).ready(function () {
 });
 
 
-// new code for the sub menu of the inner pages
-// document.addEventListener("DOMContentLoaded", function () {
-
-//     // 1. Add the caret HTML to the first-level menu items
-//     var firstLevelMenuItems = document.querySelectorAll('#menu-afesd-activities-innerpage-english > li.menu-item-has-children > a');
-
-//     firstLevelMenuItems.forEach(function (menuItem) {
-//         var caretHTML = '<span class="sub-arrow"><i class="fas fa-caret-down"></i></span>';
-
-//         // Append caret HTML only if it doesn't already exist
-//         if (!menuItem.querySelector('.sub-arrow')) {
-//             menuItem.innerHTML += caretHTML;
-//         }
-//     });
-
-//     // 2. On hover, add "highlighted" class to top-level a tag (if it has children)
-//     firstLevelMenuItems.forEach(function (menuItem) {
-//         var listItem = menuItem.parentElement;
-
-//         // Add hover event to toggle the "highlighted" class
-//         listItem.addEventListener("mouseenter", function () {
-//             if (listItem.classList.contains('menu-item-has-children')) {
-//                 menuItem.classList.add("highlighted");
-//                 menuItem.classList.add("has-submenu");
-//             }
-//         });
-
-//         listItem.addEventListener("mouseleave", function () {
-//             if (listItem.classList.contains('menu-item-has-children')) {
-//                 menuItem.classList.remove("highlighted");
-//             }
-//         });
-//     });
-
-//     // 3. Add "selected-sub" class to submenu on hover over the parent a tag
-//     var subMenus = document.querySelectorAll('ul.menu > li.menu-item-has-children > ul.sub-menu');
-
-//     subMenus.forEach(function (submenu) {
-//         var parentMenuItem = submenu.parentElement;
-
-//         parentMenuItem.addEventListener("mouseenter", function () {
-//             submenu.classList.add("selected-sub");
-//         });
-
-//         parentMenuItem.addEventListener("mouseleave", function () {
-//             submenu.classList.remove("selected-sub");
-//         });
-//     });
-// });
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    // 1. Add the caret HTML to the first-level menu items
-    var firstLevelMenuItems = document.querySelectorAll('#menu-afesd-activities-innerpage-english > li.menu-item-has-children > a');
-
-    firstLevelMenuItems.forEach(function (menuItem) {
-        var caretHTML = '<span class="sub-arrow"><i class="fas fa-caret-down"></i></span>';
-
-        // Append caret HTML only if it doesn't already exist
-        if (!menuItem.querySelector('.sub-arrow')) {
-            menuItem.innerHTML += caretHTML;
-        }
-    });
-
-    // 2. On hover, add "highlighted" class to top-level a tag (if it has children)
-    firstLevelMenuItems.forEach(function (menuItem) {
-        var listItem = menuItem.parentElement;
-
-        // Add hover event to toggle the "highlighted" class
-        listItem.addEventListener("mouseenter", function () {
-            if (listItem.classList.contains('menu-item-has-children')) {
-                menuItem.classList.add("highlighted");
-                menuItem.classList.add("has-submenu");
-            }
-        });
-
-        listItem.addEventListener("mouseleave", function () {
-            if (listItem.classList.contains('menu-item-has-children')) {
-                menuItem.classList.remove("highlighted");
-            }
-        });
-    });
-
-    // 3. Add initial inline styling and aria attributes to submenus
-    var subMenus = document.querySelectorAll('ul.menu > li.menu-item-has-children > ul.sub-menu');
-
-    subMenus.forEach(function (submenu) {
-        submenu.style.cssText = "width: auto; display: none; top: auto; left: 0px; margin-left: 0px; margin-top: 0px; min-width: 10em; max-width: 1000px;";
-        submenu.setAttribute('aria-hidden', 'true');
-        submenu.setAttribute('aria-expanded', 'false');
-    });
-
-    // 4. On hover, update inline styles and aria attributes
-    subMenus.forEach(function (submenu) {
-        var parentMenuItem = submenu.parentElement;
-        var anchorTag = parentMenuItem.querySelector('a');
-
-        parentMenuItem.addEventListener("mouseenter", function () {
-            submenu.style.cssText = "width: auto; display: block; top: auto; left:unset; margin-left: 0px; margin-top: 0px; min-width: 10em; max-width: 230px; z-index: 3;position:absolute; background:white;";
-            submenu.setAttribute('aria-hidden', 'false');
-            submenu.setAttribute('aria-expanded', 'true');
-        });
-
-        parentMenuItem.addEventListener("mouseleave", function () {
-            submenu.style.cssText = "width: auto; display: none; top: auto; left: 0px; margin-left: 0px; margin-top: 0px; min-width: 10em; max-width: 1000px;";
-            submenu.setAttribute('aria-hidden', 'true');
-            submenu.setAttribute('aria-expanded', 'false');
-        });
-    });
-});
-// jQuery(document).ready(function () {
-//     console.log("I am  alive")
-//     jQuery('html.wp-toolbar').attr('dir', 'ltr');
-// });
-
-// console.log("I am  alive")
