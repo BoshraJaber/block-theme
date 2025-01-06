@@ -339,8 +339,8 @@ function arab_fund_enqueue_styles()
 function add_patterns_to_admin_menu()
 {
     add_menu_page(
-        __('Arab Fund Patterns', 'http://localhost/arabfund/wordpress/wp-admin'), // Page title
-        __('Arab Fund Patterns', 'http://localhost/arabfund/wordpress//wp-admin'), // Menu title
+        __('Arab Fund Patterns', '/wp-admin'), // Page title
+        __('Arab Fund Patterns', '/wp-admin'), // Menu title
         'edit_posts',                             // Capability
         'edit.php?post_type=wp_block',            // Menu slug
         '',                                       // Function (not needed here)
@@ -1223,3 +1223,19 @@ add_shortcode('mega_menu', 'display_mega_menu_shortcode');
 
 
 
+
+
+// Add Theme to Dashboard Sidebar
+function add_theme_to_admin_menu()
+{
+    add_menu_page(
+        __('Theme Settings', 'textdomain'), // Page title
+        __('Theme Settings', 'textdomain'), // Menu title
+        'edit_theme_options',              // Capability required
+        'themes.php',                      // URL slug to link to the WordPress Themes page
+        '',                                // Callback function (not needed here)
+        'dashicons-admin-appearance',      // Icon for the menu
+        5                                  // Position in the menu
+    );
+}
+add_action('admin_menu', 'add_theme_to_admin_menu');
