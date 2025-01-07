@@ -1230,7 +1230,7 @@ function add_theme_to_admin_menu()
 {
     add_menu_page(
         __('Appearance', 'textdomdomain: ain'), 
-        __('Theme Settings', 'textdomain'), 
+        __('Appearance', 'textdomain'), 
         'edit_theme_options',        
         'themes.php',                 
         '',                               

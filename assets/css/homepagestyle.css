@@ -8198,3 +8198,6 @@ html[lang=ar] .nested-list .wp-block-list li::before {
     line-height: 1.6;
     font-size: 20px;
 }
+.mfp-hide {
+    display: none;
+}
