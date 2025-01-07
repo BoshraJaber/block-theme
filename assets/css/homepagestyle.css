@@ -8199,5 +8199,5 @@ html[lang=ar] .nested-list .wp-block-list li::before {
     font-size: 20px;
 }
 .mfp-hide {
-    display: none;
+    display: none !important;
 }
