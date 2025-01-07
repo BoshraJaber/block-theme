@@ -53,20 +53,20 @@ html[dir='rtl'] .site-header .top-header-menu ul li a {
 
 html[dir='rtl'] .elementor-top-section,
 html[dir='rtl'] .site-header {
-    background-image: url(/arabfund/wp-content/uploads/2023/12/header_bg_ar.png);
+    background-image: url(/wp-content/uploads/2023/12/header_bg_ar.png);
     background-position: center left;
     background-repeat: round;
 }
 
 html[dir='rtl'] .fixed {
-    background-image: url(/arabfund/wp-content/uploads/2023/12/header_bg_ar.png) !important;
+    background-image: url(/wp-content/uploads/2023/12/header_bg_ar.png) !important;
     background-position: center left;
     background-repeat: no-repeat;
 }
 
 .elementor-top-section,
 .site-header {
-    background-image: url(/arabfund/wp-content/uploads/2023/12/header_bg_EN.png) !important;
+    background-image: url(/wp-content/uploads/2023/12/header_bg_EN.png) !important;
     background-repeat: no-repeat;
     max-width: 1860px !important;
     width: 100% !important;
@@ -88,7 +88,7 @@ html[dir='rtl'] .fixed {
 .site-header.fixed {
     z-index: 9999;
     position: fixed;
-    background-image: url(/arabfund/wp-content/uploads/2023/12/header_bg_EN.png) !important;
+    background-image: url(/wp-content/uploads/2023/12/header_bg_EN.png) !important;
     background-position: center left;
 }
 
@@ -1307,7 +1307,7 @@ html[dir='rtl'] .elementor-swiper-button.elementor-swiper-button-next {
     background-image: linear-gradient(90deg, #45996F 0%, #1F5A41 87%);
     transition: background var(--overlay-transition, .3s), border-radius var(--border-transition, .3s), opacity var(--overlay-transition, .3s);
     background-color: #398C63;
-    background-image: url(/arabfund/wp-content/uploads/2023/11/Green_pattern.svg);
+    background-image: url(/wp-content/uploads/2023/11/Green_pattern.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2008,7 +2008,7 @@ html[dir='rtl'] ul.tabs li:last-child {
 
 .table_capital {
     border-radius: 0 0 10px 10px;
-    background-image: url(/arabfund/wp-content/uploads/2023/12/Years_bg.svg);
+    background-image: url(/wp-content/uploads/2023/12/Years_bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -2152,7 +2152,7 @@ html[dir='rtl'] .eael-adv-accordion ul {
 
 .eael-adv-accordion li:before {
     position: absolute;
-    content: url(/arabfund/wp-content/uploads/2023/12/feather-arrow-right.svg);
+    content: url(/wp-content/uploads/2023/12/feather-arrow-right.svg);
     top: 2px;
     left: -30px;
 }
@@ -2384,7 +2384,7 @@ html[dir='rtl'] .sub_sub_list {
 
 .sub_ul_list li:before {
     position: absolute;
-    content: url(/arabfund/wp-content/uploads/2023/12/feather-arrow-right.svg);
+    content: url(/wp-content/uploads/2023/12/feather-arrow-right.svg);
     top: 2px;
     left: -30px;
 }
@@ -3286,7 +3286,7 @@ html[dir='rtl'] .gallery_image {
     left: 0;
     width: 99.94%;
     height: 94%;
-    background-image: url(/arabfund/wp-content/uploads/2024/01/video_play_Layer.png);
+    background-image: url(/wp-content/uploads/2024/01/video_play_Layer.png);
     background-size: auto;
     border-radius: 0px;
     background-position: center;
@@ -3868,7 +3868,7 @@ html[dir='rtl'] .single-meeting-box ul {
 
 .single-meeting-box li:before {
     position: absolute;
-    content: url(/arabfund/wp-content/uploads/2023/12/feather-arrow-right.svg);
+    content: url(/wp-content/uploads/2023/12/feather-arrow-right.svg);
     top: 2px;
     left: -30px;
 }
@@ -5669,12 +5669,12 @@ html[lang=en-US] .eael-advanced-menu .sub-menu li a:hover {
 
     html[dir="rtl"] .site-header.fixed .header-logo a,
     html[dir="rtl"] .site-header.fixed .header-logo a {
-        background-image: url(/arabfund/wp-content/uploads/2024/05/AF_logo_AR.png);
+        background-image: url(/wp-content/uploads/2024/05/AF_logo_AR.png);
     }
 
     html[lang=en-US] .site-header.fixed .header-logo a,
     html[lang=en-US] .site-header.fixed .header-logo a {
-        background-image: url(/arabfund/wp-content/uploads/2024/05/AF_logo_En.png);
+        background-image: url(/wp-content/uploads/2024/05/AF_logo_En.png);
     }
 
     .site-header .header-logo a img {
@@ -6111,7 +6111,7 @@ html[dir="rtl"] footer a:hover {
 
     .site-logo-block .wp-caption a,
     .site-logo-block a {
-        background: url(/arabfund/wp-content/uploads/2024/05/AF_logo_En.png) no-repeat;
+        background: url(/wp-content/uploads/2024/05/AF_logo_En.png) no-repeat;
         background-size: contain;
         width: 300px;
         background-size: 100% 65px !important;
@@ -6119,7 +6119,7 @@ html[dir="rtl"] footer a:hover {
 
     html[dir=rtl] .site-logo-block .wp-caption a,
     html[dir=rtl] .site-logo-block a {
-        background: url(/arabfund/wp-content/uploads/2024/05/AF_logo_AR.png) no-repeat;
+        background: url(/wp-content/uploads/2024/05/AF_logo_AR.png) no-repeat;
         background-size: 75% 45px;
         width: 100%;
         background-position: right center;
@@ -6842,11 +6842,11 @@ h2.report_heading {
 }
 
 html[dir='rtl'] .mobile-menu-open .site-header {
-    background-image: url(/arabfund/wp-content/uploads/2023/12/header_bg_ar.png) !important;
+    background-image: url(/wp-content/uploads/2023/12/header_bg_ar.png) !important;
 }
 
 html[lang=en-US] .mobile-menu-open .site-header {
-    background-image: url(/arabfund/wp-content/uploads/2023/12/header_bg_EN.png) !important;
+    background-image: url(/wp-content/uploads/2023/12/header_bg_EN.png) !important;
     background-position: right center;
     background-size: 100% 100%;
 }
@@ -6914,11 +6914,11 @@ html[dir='rtl'] .jae_report_box.en_view {
 
 
 html[lang='en-US'] .flexable-list-icon ul {
-    list-style-image: url(/arabfund/wp-content/uploads/2024/06/arrow-right-list-1.svg);
+    list-style-image: url(/wp-content/uploads/2024/06/arrow-right-list-1.svg);
 }
 
 html[dir='rtl'] .flexable-list-icon ul {
-    list-style-image: url(/arabfund/wp-content/uploads/2024/06/feather-arrow-left-padding.svg);
+    list-style-image: url(/wp-content/uploads/2024/06/feather-arrow-left-padding.svg);
 }
 
 html[dir='rtl'] .flexable-list-icon ul li {
@@ -6944,7 +6944,7 @@ html[lang='en-US'] .flexable-list-icon ul li {
 
     html[dir="rtl"] .site-header .site-logo-block .wp-caption a,
     html[dir="rtl"] .site-header .site-logo-block a {
-        background-image: url(/arabfund/wp-content/uploads/2024/05/AF_logo_AR.png);
+        background-image: url(/wp-content/uploads/2024/05/AF_logo_AR.png);
         width: 300px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -6953,7 +6953,7 @@ html[lang='en-US'] .flexable-list-icon ul li {
 
     html[lang=en-US] .site-header .site-logo-block .wp-caption a,
     html[lang=en-US] .site-header .site-logo-block a {
-        background-image: url(/arabfund/wp-content/uploads/2024/05/AF_logo_En.png);
+        background-image: url(/wp-content/uploads/2024/05/AF_logo_En.png);
         width: 300px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -7552,7 +7552,7 @@ html[lang=ar] .float-side-video {
 /* Arab fund in Numbers */
 .arab-in-numbers-container {
     background-color: #f7f6f3;
-    background-image: url(/arabfund/wp-content/uploads/2023/11/count_bg.png);
+    background-image: url(/wp-content/uploads/2023/11/count_bg.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7614,7 +7614,7 @@ html[lang=ar] .float-side-video {
 
 /* Map Section */
 .map_section {
-    background-image: url(/arabfund/wp-content/uploads/2023/11/map_bg_new.svg);
+    background-image: url(/wp-content/uploads/2023/11/map_bg_new.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7673,7 +7673,7 @@ html[dir='rtl'] footer a:hover:before {
 
 footer {
     background-color: #0a412e;
-    background-image: url(/arabfund/wp-content/uploads/2023/10/footer_bg_new.png);
+    background-image: url(/wp-content/uploads/2023/10/footer_bg_new.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

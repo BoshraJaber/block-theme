@@ -209,7 +209,7 @@ html[lang="ar"] .en_view {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(/arabfund/wp-content/uploads/2024/02/video_gallery_play.png);
+	background-image: url(/wp-content/uploads/2024/02/video_gallery_play.png);
 	background-size: cover;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
@@ -228,7 +228,7 @@ html[lang="ar"] .en_view {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(/arabfund/wp-content/uploads/2024/01/photo_bg_layer.png);
+	background-image: url(/wp-content/uploads/2024/01/photo_bg_layer.png);
 	background-size: cover;
 	border-radius: 10px;
 	background-position: center;
@@ -253,14 +253,14 @@ html[lang="ar"] .en_view {
 
 	.site-logo-block .elementor-image .wp-caption a,
 	.site-logo-block .elementor-image a {
-		background: url(/arabfund/wp-content/uploads/2024/05/AF_logo_En.png) no-repeat;
+		background: url(/wp-content/uploads/2024/05/AF_logo_En.png) no-repeat;
 		background-size: 75% 45px;
 		width: 100%;
 	}
 
 	html[dir="rtl"] .site-logo-block .elementor-image .wp-caption a,
 	html[dir="rtl"] .site-logo-block .elementor-image a {
-		background: url(/arabfund/wp-content/uploads/2024/05/AF_logo_AR.png) no-repeat;
+		background: url(/wp-content/uploads/2024/05/AF_logo_AR.png) no-repeat;
 		background-size: 75% 45px;
 		width: 100%;
 		background-position: right;
