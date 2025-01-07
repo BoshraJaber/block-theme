@@ -1229,13 +1229,13 @@ add_shortcode('mega_menu', 'display_mega_menu_shortcode');
 function add_theme_to_admin_menu()
 {
     add_menu_page(
-        __('Theme Settings', 'textdomain'), // Page title
-        __('Theme Settings', 'textdomain'), // Menu title
-        'edit_theme_options',              // Capability required
-        'themes.php',                      // URL slug to link to the WordPress Themes page
-        '',                                // Callback function (not needed here)
-        'dashicons-admin-appearance',      // Icon for the menu
-        5                                  // Position in the menu
+        __('Appearance', 'textdomdomain: ain'), 
+        __('Theme Settings', 'textdomain'), 
+        'edit_theme_options',        
+        'themes.php',                 
+        '',                               
+        'dashicons-admin-appearance',    
+        5                                
     );
 }
 add_action('admin_menu', 'add_theme_to_admin_menu');
