@@ -44,11 +44,6 @@ if (!function_exists('arab_fund_block_styles')):
 				.is-style-arrow-icon-details summary {
 					list-style-type: "\2193\00a0\00a0\00a0";
 				}
-                        html.interface-interface-skeleton__html-container:not(:has(.is-zoom-out)) {
-        position: static;
-        width: auto;
-        direction: ltr;
-    }
 
 				.is-style-arrow-icon-details[open]>summary {
 					list-style-type: "\2192\00a0\00a0\00a0";
