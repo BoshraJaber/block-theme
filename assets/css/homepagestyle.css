@@ -3421,7 +3421,7 @@ html[dir='rtl'] .inner-page-navigation .sub-arrow {
     color: #2f835b !important;
     padding: 0 30px !important;
     margin-right: 10px !important;
-    border:1px solid #2f815a !important;
+    border: 1px solid #2f815a !important;
     background: transparent;
 }
 
@@ -8198,6 +8198,11 @@ html[lang=ar] .nested-list .wp-block-list li::before {
     line-height: 1.6;
     font-size: 20px;
 }
+
 .mfp-hide {
     display: none !important;
+}
+
+.direction-ltr {
+    direction: ltr !important;
 }
