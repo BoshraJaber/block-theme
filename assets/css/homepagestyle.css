@@ -2397,9 +2397,10 @@ html[dir='rtl'] .sub_ul_list li:before {
 
 
 .contact_img img {
-    border-radius: 20px 20px 20px 0px;
-    min-height: 620px;
-    width: min(347px, 100%);
+	border-radius: 20px 20px 20px 0px;
+	min-height: 620px;
+	width: min(347px, 100%);
+	object-fit: cover;
 }
 
 .border_theme {
